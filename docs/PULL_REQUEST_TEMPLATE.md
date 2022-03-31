@@ -8,14 +8,6 @@
   <li>How has it been tested?</li>
 </ul>
 
-<h2> Description </h2>
-
-<ul>
-  <li>Please include a summary of the change and which issue is fixed.</li>
-  <li>Please also include relevant motivation and context.</li>
-  <li>List any dependencies that are required for this change.</li>
-</ul>
-
 <h2>Type of Change</h2>
 
 _Delete options that are not relevant_
