@@ -6,6 +6,8 @@ var posterTitle = document.querySelector(".poster-title");
 
 var posterQuote = document.querySelector(".poster-quote");
 
+var rdmButton = document.querySelector(".show-random");
+
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -109,9 +111,11 @@ var currentPoster;
 
 // event listeners go here 👇
 
+rdmButton.addEventListener("click", showRandomPoster);
+
 // functions and event handlers go here 👇
 
-window.addEventListener("load", showRandomPoster())
+window.addEventListener("load", showRandomPoster);
 
 function showRandomPoster() {
   posterImage.src = images[getRandomIndex(images)];
