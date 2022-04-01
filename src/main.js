@@ -1,6 +1,7 @@
 // query selector variables go here 👇
 
-var mainPoster = document.querySelector(".main-poster");
+//main-poster(not hidden)
+var mainView = document.querySelector(".main-poster");
 
 var posterImage = document.querySelector(".poster-img");
 
@@ -17,16 +18,16 @@ var showSavedButton = document.querySelector(".show-saved");
 var makeFormButton = document.querySelector(".show-form");
 
 
-
-var makeFormPage = document.querySelector(".poster-form");
+//poster-form-view(hidden)
+var makeView = document.querySelector(".poster-form");
 
 var makePosterButton = document.querySelector(".make-poster");
 
 var showMainButton = document.querySelector(".show-main");
 
 
-
-var savedPosters = document.querySelector(".saved-posters");
+//save-posters-view(hidden)
+var saveView = document.querySelector(".saved-posters");
 
 var backMainButton = document.querySelector(".back-to-main");
 
@@ -133,18 +134,48 @@ var savedPosters = [];
 var currentPoster;
 
 // event listeners go here 👇
+window.addEventListener("load", showRandomPoster);
 
 rdmButton.addEventListener("click", showRandomPoster);
+//VIEW PAGE BUTTONS
+//view form page
+makeFormButton.addEventListener("click", showNewView);
+//view form page => Home
+showMainButton.addEventListener("click", showHomeView)
+//SAVED PAGE BUTTON
+showSavedButton.addEventListener("click", showSaveView);
+//saved form page =>
+backMainButton.addEventListener("click", showHomeView)
+
 
 // functions and event handlers go here 👇
 
-window.addEventListener("load", showRandomPoster);
 
 function showRandomPoster() {
   posterImage.src = images[getRandomIndex(images)];
   posterTitle.innerText = titles[getRandomIndex(titles)];
   posterQuote.innerText = quotes[getRandomIndex(quotes)];
-}
+};
+
+//VIEW PAGE FUNCTIONS
+
+function showHomeView() {
+ mainView.classList.remove("hidden")
+ saveView.classList.add("hidden")
+ makeView.classList.add("hidden")
+};
+
+function showSaveView() {
+  makeView.classList.add("hidden")
+  mainView.classList.add("hidden")
+  saveView.classList.remove("hidden")
+};
+
+function showNewView() {
+  mainView.classList.add("hidden")
+  makeView.classList.remove("hidden")
+  savedView.classList.add("hidden")
+};
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
