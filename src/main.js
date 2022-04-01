@@ -137,9 +137,15 @@ var currentPoster;
 window.addEventListener("load", showRandomPoster);
 
 rdmButton.addEventListener("click", showRandomPoster);
-//need three addEventListeners for showHomeView, showHomeView, showSaveView
+//VIEW PAGE BUTTONS
+//view form page
 makeFormButton.addEventListener("click", showNewView);
+//view form page => Home
+showMainButton.addEventListener("click", showHomeView)
+//SAVED PAGE BUTTON
 showSavedButton.addEventListener("click", showSaveView);
+//saved form page =>
+backMainButton.addEventListener("click", showHomeView)
 
 
 // functions and event handlers go here 👇
@@ -151,9 +157,7 @@ function showRandomPoster() {
   posterQuote.innerText = quotes[getRandomIndex(quotes)];
 };
 
-//make three functions
-//each function is going to add the hidden class and remove the hidden class
-//from the elements provided
+//VIEW PAGE FUNCTIONS
 
 function showHomeView() {
  mainView.classList.remove("hidden")
