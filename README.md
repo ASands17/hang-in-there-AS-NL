@@ -1,21 +1,14 @@
-# Hang In There
+# Hang in There: A Motivational Poster Generator that puts some pep back into your step!
 
-A boilerplate repo.
+## How to Run This Page
 
-## Set Up
+1. Fork this repo and clone it to your local repository.
+2. In terminal, cd into this directory.
+3. Run `open index.html` to open the page.
 
-1. One teammate: fork this repository
-2. Clone down your new, forked repo
-3. cd into the repository
-4. Open it in your text editor
-5. Add all project partners and your assigned instructor as collaborators on the repository
 
 Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
 
-To view your project:
-
-1. In your terminal, navigate to your project repo
-2. Run the command `open index.html`
 
 # Iteration 2
 
