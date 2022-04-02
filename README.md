@@ -23,3 +23,15 @@ Hang in There utilizes the following technologies:
 - Generate a poster with random inspirational words and images
 - Personalize a poster with your own favorite quotes and pictures
 - Save your poster to share it with others
+
+# Deployed Page
+[View Hang In There Poster Generator](https://asands17.github.io/hang-in-there-AS-NL/)
+
+#Thoughts on Future Iterations
+- Add a feature for automatically downloading posters
+- Allow the user to “favorite” posters on the saved posters page
+- Allow users to share their posters for other site users to view and download
+
+#Contributors
+[Neil Linton](https://github.com/LINTONBNEIL)
+[Amanda Sands](https://github.com/ASands17)
