@@ -17,6 +17,8 @@ var showSavedButton = document.querySelector(".show-saved");
 
 var makeFormButton = document.querySelector(".show-form");
 
+var savedPosterGrid = document.querySelector(".saved-posters-grid");
+
 
 //poster-form-view(hidden)
 var makeView = document.querySelector(".poster-form");
@@ -156,12 +158,14 @@ pushPoster();
 showHomeView();
 })
 //view form page => Home
-showMainButton.addEventListener("click", showHomeView)
+showMainButton.addEventListener("click", showHomeView);
 //SAVED PAGE BUTTON
-showSavedButton.addEventListener("click", showSaveView);
+showSavedButton.addEventListener("click", saveHelper);
 //saved form page =>
 backMainButton.addEventListener("click", showHomeView)
 
+//to save poster if it is unique
+saveButton.addEventListener("click", avoidDuplicates);
 
 // functions and event handlers go here 👇
 
@@ -211,6 +215,31 @@ function showNewView() {
   makeView.classList.remove("hidden")
   saveView.classList.add("hidden")
 };
+
+//Save poster function
+
+function savePoster() {
+  var display = "";
+  for (var i = 0; i < savedPosters.length; i++) {
+    display += `<article class="mini-poster">
+      <img class="poster-img" id=${savedPosters[i].id} src="${savedPosters[i].imageURL}" alt="nothin' to see here">
+      <h2 class="poster-title">${savedPosters[i].title}</h2>
+      <h4 class="poster-quote">${savedPosters[i].quote}</h4>
+    </article>`
+  }
+  savedPosterGrid.innerHTML = display;
+};
+
+function avoidDuplicates() {
+  if (!savedPosters.includes(currentPoster)) {
+    savedPosters.push(currentPoster);
+  }
+}
+
+function saveHelper() {
+  showSaveView();
+  savePoster();
+}
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
