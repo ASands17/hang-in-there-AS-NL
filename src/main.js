@@ -162,6 +162,8 @@ showSavedButton.addEventListener("click", showSaveView);
 //saved form page =>
 backMainButton.addEventListener("click", showHomeView)
 
+//to save poster if it is unique
+saveButton.addEventListener("click", savePoster);
 
 // functions and event handlers go here 👇
 
@@ -210,6 +212,16 @@ function showNewView() {
   mainView.classList.add("hidden")
   makeView.classList.remove("hidden")
   saveView.classList.add("hidden")
+};
+
+//Save poster function
+
+function savePoster() {
+  for (var i = 0; i < savedPosters.length; i++) {
+    if (!savedPosters.includes(currentPoster)) {
+      savedPosters.push(currentPoster);
+    }
+  }
 };
 
 // (we've provided one for you to get you started)!
