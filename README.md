@@ -1,32 +1,37 @@
-# Hang In There
+# Hang in There: A Motivational Poster Generator that puts some pep back into your step!
 
-A boilerplate repo.
+# Introduction
 
-## Set Up
+Hang in There is a website that gives you a boost. Generate a poster with random words of inspiration and uplifting images. Or, use your own pictures and favorite quotes to create a poster all your own. Print one out and hang it above your desk. Send one to your co-worker. Get creative, and get motivated!
 
-1. One teammate: fork this repository
-2. Clone down your new, forked repo
-3. cd into the repository
-4. Open it in your text editor
-5. Add all project partners and your assigned instructor as collaborators on the repository
+## How to Run This Page
+
+1. Fork this repo and clone it to your local repository.
+2. In terminal, cd into this directory.
+3. Run `open index.html` to open the page.
+
 
 Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
 
-To view your project:
+# Technologies Used
+Hang in There utilizes the following technologies:
+- Javascript
+- CSS
+- HTML
 
-1. In your terminal, navigate to your project repo
-2. Run the command `open index.html`
+# Features
+- Generate a poster with random inspirational words and images
+- Personalize a poster with your own favorite quotes and pictures
+- Save your poster to share it with others
 
-# Iteration 2
+# Deployed Page
+[View Hang In There Poster Generator](https://asands17.github.io/hang-in-there-AS-NL/)
 
-1. On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
+# Thoughts on Future Iterations
+- Add a feature for automatically downloading posters
+- Allow the user to “favorite” posters on the saved posters page
+- Allow users to share their posters for other site users to view and download
 
-2. When the Show My Poster button is clicked, several things will happen:
-
-- [ ] Use the values from the inputs to create a new instance of our Poster class (part of your data model)
-
-- [ ] Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
-
-- [ ] Change back to the main poster view (hiding the form view again)
-
-- [ ] Use the new instance of the Poster class (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
+# Contributors
+- [Neil Linton](https://github.com/LINTONBNEIL)
+- [Amanda Sands](https://github.com/ASands17)
