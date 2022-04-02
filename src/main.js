@@ -21,6 +21,13 @@ var makeFormButton = document.querySelector(".show-form");
 //poster-form-view(hidden)
 var makeView = document.querySelector(".poster-form");
 
+//post-input-values
+var userImg = document.getElementById("poster-image-url")
+
+var userTitle = document.getElementById("poster-title")
+
+var userQuote = document.getElementById("poster-quote")
+// poster buttons
 var makePosterButton = document.querySelector(".make-poster");
 
 var showMainButton = document.querySelector(".show-main");
@@ -140,6 +147,14 @@ rdmButton.addEventListener("click", showRandomPoster);
 //VIEW PAGE BUTTONS
 //view form page
 makeFormButton.addEventListener("click", showNewView);
+//view form Show my poster
+makePosterButton.addEventListener("click", function() {
+  event.preventDefault();
+myPoster(userImg.value, userTitle.value, userQuote.value);
+newPoster();
+pushPoster();
+showHomeView();
+})
 //view form page => Home
 showMainButton.addEventListener("click", showHomeView)
 //SAVED PAGE BUTTON
@@ -152,11 +167,31 @@ backMainButton.addEventListener("click", showHomeView)
 
 
 function showRandomPoster() {
-  posterImage.src = images[getRandomIndex(images)];
-  posterTitle.innerText = titles[getRandomIndex(titles)];
-  posterQuote.innerText = quotes[getRandomIndex(quotes)];
+  currentPoster = new Poster(
+  images[getRandomIndex(images)],
+  titles[getRandomIndex(titles)],
+  quotes[getRandomIndex(quotes)]
+);
+newPoster();
 };
 
+//FORM VIEW FUNCTION
+
+function myPoster(newPoster, newTitle, newQuote) {
+  currentPoster = new Poster (newPoster, newTitle, newQuote)
+};
+
+function newPoster() {
+  posterImage.src = currentPoster.imageURL;
+  posterTitle.innerText = currentPoster.title;
+  posterQuote.innerText = currentPoster.quote;
+};
+
+function pushPoster() {
+  images.push(currentPoster.imageURL);
+  titles.push(currentPoster.title);
+  quotes.push(currentPoster.quote);
+};
 //VIEW PAGE FUNCTIONS
 
 function showHomeView() {
@@ -174,10 +209,10 @@ function showSaveView() {
 function showNewView() {
   mainView.classList.add("hidden")
   makeView.classList.remove("hidden")
-  savedView.classList.add("hidden")
+  saveView.classList.add("hidden")
 };
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}
+};
