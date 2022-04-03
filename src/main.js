@@ -125,6 +125,7 @@ var savedPosters = [];
 var currentPoster;
 
 // event listeners go here 👇
+
 window.addEventListener("load", showRandomPoster);
 
 rdmButton.addEventListener("click", showRandomPoster);
@@ -147,7 +148,7 @@ showSavedButton.addEventListener("click", saveHelper);
 backMainButton.addEventListener("click", showHomeView)
 
 //to save poster if it is unique
-saveButton.addEventListener("click", avoidDuplicates);
+saveButton.addEventListener("click", saveNewPoster);
 
 saveView.addEventListener("dblclick", deleteOnClick);
 // functions and event handlers go here 👇
@@ -201,7 +202,7 @@ function showNewView() {
 
 //Save poster function
 
-function savePoster() {
+function displayPoster() {
   var display = "";
   for (var i = 0; i < savedPosters.length; i++) {
     display += `<article class="mini-poster">
@@ -213,7 +214,7 @@ function savePoster() {
   savedPosterGrid.innerHTML = display;
 };
 
-function avoidDuplicates() {
+function saveNewPoster() {
   if (!savedPosters.includes(currentPoster)) {
     savedPosters.push(currentPoster);
   }
@@ -221,7 +222,7 @@ function avoidDuplicates() {
 
 function saveHelper() {
   showSaveView();
-  savePoster();
+  displayPoster();
 }
 
 function deleteOnClick(event) {
