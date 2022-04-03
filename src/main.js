@@ -129,10 +129,9 @@ var currentPoster;
 window.addEventListener("load", showRandomPoster);
 
 rdmButton.addEventListener("click", showRandomPoster);
-//VIEW PAGE BUTTONS
-//view form page
+
 makeFormButton.addEventListener("click", showNewView);
-//view form Show my poster
+
 makePosterButton.addEventListener("click", function() {
   event.preventDefault();
 myPoster(userImg.value, userTitle.value, userQuote.value);
@@ -140,19 +139,18 @@ newPoster();
 pushPoster();
 showHomeView();
 })
-//view form page => Home
+
 showMainButton.addEventListener("click", showHomeView);
-//SAVED PAGE BUTTON
+
 showSavedButton.addEventListener("click", saveHelper);
-//saved form page =>
+
 backMainButton.addEventListener("click", showHomeView)
 
-//to save poster if it is unique
 saveButton.addEventListener("click", saveNewPoster);
 
 saveView.addEventListener("dblclick", deleteOnClick);
-// functions and event handlers go here 👇
 
+// functions and event handlers go here 👇
 
 function showRandomPoster() {
   currentPoster = new Poster(
@@ -162,8 +160,6 @@ function showRandomPoster() {
 );
 newPoster();
 };
-
-//FORM VIEW FUNCTION
 
 function myPoster(newPoster, newTitle, newQuote) {
   currentPoster = new Poster (newPoster, newTitle, newQuote)
@@ -180,7 +176,6 @@ function pushPoster() {
   titles.push(currentPoster.title);
   quotes.push(currentPoster.quote);
 };
-//VIEW PAGE FUNCTIONS
 
 function showHomeView() {
  mainView.classList.remove("hidden")
@@ -199,8 +194,6 @@ function showNewView() {
   makeView.classList.remove("hidden")
   saveView.classList.add("hidden")
 };
-
-//Save poster function
 
 function displayPoster() {
   var display = "";
@@ -235,7 +228,6 @@ function deleteOnClick(event) {
  }
 }
 
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
