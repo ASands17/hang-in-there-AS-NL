@@ -1,43 +1,25 @@
 // query selector variables go here 👇
 
-//main-poster(not hidden)
 var mainView = document.querySelector(".main-poster");
-
 var posterImage = document.querySelector(".poster-img");
-
 var posterTitle = document.querySelector(".poster-title");
-
 var posterQuote = document.querySelector(".poster-quote");
-
 var rdmButton = document.querySelector(".show-random");
-
 var saveButton = document.querySelector(".save-poster");
-
 var showSavedButton = document.querySelector(".show-saved");
-
 var makeFormButton = document.querySelector(".show-form");
-
 var savedPosterGrid = document.querySelector(".saved-posters-grid");
 
-
-//poster-form-view(hidden)
 var makeView = document.querySelector(".poster-form");
 
-//post-input-values
 var userImg = document.getElementById("poster-image-url")
-
 var userTitle = document.getElementById("poster-title")
-
 var userQuote = document.getElementById("poster-quote")
-// poster buttons
-var makePosterButton = document.querySelector(".make-poster");
 
+var makePosterButton = document.querySelector(".make-poster");
 var showMainButton = document.querySelector(".show-main");
 
-
-//save-posters-view(hidden)
 var saveView = document.querySelector(".saved-posters");
-
 var backMainButton = document.querySelector(".back-to-main");
 
 
