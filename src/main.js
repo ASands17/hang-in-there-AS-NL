@@ -134,10 +134,10 @@ makeFormButton.addEventListener("click", showNewView);
 
 makePosterButton.addEventListener("click", function() {
   event.preventDefault();
-myPoster(userImg.value, userTitle.value, userQuote.value);
-newPoster();
-pushPoster();
-showHomeView();
+  myPoster(userImg.value, userTitle.value, userQuote.value);
+  newPoster();
+  pushPoster();
+  showHomeView();
 })
 
 showMainButton.addEventListener("click", showHomeView);
@@ -202,7 +202,7 @@ function displayPoster() {
       <img class="poster-img" id=${savedPosters[i].id} src="${savedPosters[i].imageURL}" alt="nothin' to see here">
       <h2 class="poster-title">${savedPosters[i].title}</h2>
       <h4 class="poster-quote">${savedPosters[i].quote}</h4>
-    </article>`
+      </article>`
   }
   savedPosterGrid.innerHTML = display;
 };
