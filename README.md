@@ -28,12 +28,14 @@ Hang in There utilizes the following technologies:
 # Deployed Page
 [View Hang In There Poster Generator](https://asands17.github.io/hang-in-there-AS-NL/)
 
-# Screenshots
+# Screenshots of Webpage
 ![image0](https://user-images.githubusercontent.com/93043035/161444524-61d0ec60-600b-4e59-98f1-f395f40c79da.jpeg)
 
 ![image1](https://user-images.githubusercontent.com/93043035/161444559-8eb2c6b0-bea7-4540-85a5-ad2e55eb271c.jpeg)
 
 ![DCE728EF-E157-427D-BBA5-0558E52ADB81](https://user-images.githubusercontent.com/93043035/161444765-2ef673d9-0d11-49a8-87b5-64d37a8e296f.jpeg)
+
+![41C80720-5152-4AF3-BDFE-5250EC2F3CDC](https://user-images.githubusercontent.com/93043035/161445513-8a97a581-8143-47e1-b24e-20fef44c1905.jpeg)
 
 
 
