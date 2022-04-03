@@ -2,7 +2,7 @@
 
 # Introduction
 
-Hang in There is a website that gives you a boost. Generate a poster with random words of inspiration and images. Or, use your own pictures and favorite quotes to create a poster all your own. Print one out and hang it above your desk. Send one to your co-worker. Get creative, and get motivated!
+Hang in There is a website that gives you a boost. Generate a poster with random words of inspiration and uplifting images. Or, use your own pictures and favorite quotes to create a poster all your own. Print one out and hang it above your desk. Send one to your co-worker. Get creative, and get motivated!
 
 ## How to Run This Page
 
@@ -43,5 +43,5 @@ Hang in There utilizes the following technologies:
 - Allow users to share their posters for other site users to view and download
 
 # Contributors
-[Neil Linton](https://github.com/LINTONBNEIL)
-[Amanda Sands](https://github.com/ASands17)
+- [Neil Linton](https://github.com/LINTONBNEIL)
+- [Amanda Sands](https://github.com/ASands17)
