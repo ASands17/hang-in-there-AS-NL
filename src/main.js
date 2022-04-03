@@ -167,6 +167,7 @@ backMainButton.addEventListener("click", showHomeView)
 //to save poster if it is unique
 saveButton.addEventListener("click", avoidDuplicates);
 
+saveView.addEventListener("dblclick", deleteOnClick);
 // functions and event handlers go here 👇
 
 
@@ -239,6 +240,16 @@ function avoidDuplicates() {
 function saveHelper() {
   showSaveView();
   savePoster();
+}
+
+function deleteOnClick(event) {
+ var posterId = parseInt(event.target.id)
+ for (var i = 0; i < savedPosters.length; i++) {
+   if (savedPosters[i].id === posterId) {
+     savedPosters.splice(i, 1)
+     saveHelper();
+   }
+ }
 }
 
 // (we've provided one for you to get you started)!
