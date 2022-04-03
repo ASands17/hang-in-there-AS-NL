@@ -1,43 +1,25 @@
 // query selector variables go here 👇
 
-//main-poster(not hidden)
 var mainView = document.querySelector(".main-poster");
-
 var posterImage = document.querySelector(".poster-img");
-
 var posterTitle = document.querySelector(".poster-title");
-
 var posterQuote = document.querySelector(".poster-quote");
-
 var rdmButton = document.querySelector(".show-random");
-
 var saveButton = document.querySelector(".save-poster");
-
 var showSavedButton = document.querySelector(".show-saved");
-
 var makeFormButton = document.querySelector(".show-form");
-
 var savedPosterGrid = document.querySelector(".saved-posters-grid");
 
-
-//poster-form-view(hidden)
 var makeView = document.querySelector(".poster-form");
 
-//post-input-values
 var userImg = document.getElementById("poster-image-url")
-
 var userTitle = document.getElementById("poster-title")
-
 var userQuote = document.getElementById("poster-quote")
-// poster buttons
-var makePosterButton = document.querySelector(".make-poster");
 
+var makePosterButton = document.querySelector(".make-poster");
 var showMainButton = document.querySelector(".show-main");
 
-
-//save-posters-view(hidden)
 var saveView = document.querySelector(".saved-posters");
-
 var backMainButton = document.querySelector(".back-to-main");
 
 
@@ -143,33 +125,32 @@ var savedPosters = [];
 var currentPoster;
 
 // event listeners go here 👇
+
 window.addEventListener("load", showRandomPoster);
 
 rdmButton.addEventListener("click", showRandomPoster);
-//VIEW PAGE BUTTONS
-//view form page
+
 makeFormButton.addEventListener("click", showNewView);
-//view form Show my poster
+
 makePosterButton.addEventListener("click", function() {
   event.preventDefault();
-myPoster(userImg.value, userTitle.value, userQuote.value);
-newPoster();
-pushPoster();
-showHomeView();
+  myPoster(userImg.value, userTitle.value, userQuote.value);
+  newPoster();
+  pushPoster();
+  showHomeView();
 })
-//view form page => Home
+
 showMainButton.addEventListener("click", showHomeView);
-//SAVED PAGE BUTTON
+
 showSavedButton.addEventListener("click", saveHelper);
-//saved form page =>
+
 backMainButton.addEventListener("click", showHomeView)
 
-//to save poster if it is unique
-saveButton.addEventListener("click", avoidDuplicates);
+saveButton.addEventListener("click", saveNewPoster);
 
 saveView.addEventListener("dblclick", deleteOnClick);
-// functions and event handlers go here 👇
 
+// functions and event handlers go here 👇
 
 function showRandomPoster() {
   currentPoster = new Poster(
@@ -179,8 +160,6 @@ function showRandomPoster() {
 );
 newPoster();
 };
-
-//FORM VIEW FUNCTION
 
 function myPoster(newPoster, newTitle, newQuote) {
   currentPoster = new Poster (newPoster, newTitle, newQuote)
@@ -197,7 +176,6 @@ function pushPoster() {
   titles.push(currentPoster.title);
   quotes.push(currentPoster.quote);
 };
-//VIEW PAGE FUNCTIONS
 
 function showHomeView() {
  mainView.classList.remove("hidden")
@@ -217,21 +195,19 @@ function showNewView() {
   saveView.classList.add("hidden")
 };
 
-//Save poster function
-
-function savePoster() {
+function displayPoster() {
   var display = "";
   for (var i = 0; i < savedPosters.length; i++) {
     display += `<article class="mini-poster">
       <img class="poster-img" id=${savedPosters[i].id} src="${savedPosters[i].imageURL}" alt="nothin' to see here">
       <h2 class="poster-title">${savedPosters[i].title}</h2>
       <h4 class="poster-quote">${savedPosters[i].quote}</h4>
-    </article>`
+      </article>`
   }
   savedPosterGrid.innerHTML = display;
 };
 
-function avoidDuplicates() {
+function saveNewPoster() {
   if (!savedPosters.includes(currentPoster)) {
     savedPosters.push(currentPoster);
   }
@@ -239,7 +215,7 @@ function avoidDuplicates() {
 
 function saveHelper() {
   showSaveView();
-  savePoster();
+  displayPoster();
 }
 
 function deleteOnClick(event) {
@@ -252,7 +228,6 @@ function deleteOnClick(event) {
  }
 }
 
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
